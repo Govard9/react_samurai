@@ -1,7 +1,7 @@
 import './App.scss';
-import Header from './components/header/Header';
-import Navbar from './components/navbar/Navbar';
-import Profile from './components/profile/Profile';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
 
 function App() {
 	return (
@@ -12,5 +12,5 @@ function App() {
 		</div>
 	);
 }
-
+ 
 export default App;

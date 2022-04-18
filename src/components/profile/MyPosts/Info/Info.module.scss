@@ -1,0 +1,21 @@
+.profileMainImg {
+	img {
+		width: 200px;
+		margin-left: -25px;
+	}
+}
+
+.info {
+	display: flex;
+	flex-direction: row;
+
+	.nickName {
+		font-size: 25px;
+	}
+}
+
+.text {
+	p {
+		margin-top: -15px;
+	}
+}
