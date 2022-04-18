@@ -1,13 +1,13 @@
 import s from "./Post.module.scss";
 
-function Post() {
+const Post = (props) => {
 	return (
 		<div>
 			<div className={s.item}>
 				<img src="https://redmed.ge/assets/photos/avatar-3.png" />
 				<div className={s.like}>
-					<p className={s.text}>Hello mother fucker!</p>
-					<span>Like</span>
+					<p className={s.text}>{props.message}</p>
+					<span>Like: {props.like}</span>
 				</div>
 			</div>
 		</div>

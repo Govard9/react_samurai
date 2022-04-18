@@ -1,6 +1,6 @@
 import style from './Navbar.module.scss';
 
-function Navbar() {
+const Navbar = () => {
 	return (
 		<nav className={style.nav}>
 			<ul>

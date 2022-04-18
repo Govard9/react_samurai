@@ -1,7 +1,7 @@
 import s from "./MyPosts.module.scss";
 import Post from "./Post/Post";
 
-function MyPosts() {
+const MyPosts = () => {
 	return (
 		<div>
 			<div className={s.content}>
@@ -9,10 +9,11 @@ function MyPosts() {
 					<p>My post</p>
 				</span>
 				<div className={s.parent}>
-					<textarea></textarea>
-					<button>Add post</button>
+					<textarea placeholder="your news..."/>
+					<button>Send</button>
 				</div>
-				<Post />
+				<Post message='Hi, how are you?' like='23'/>
+				<Post message='My first post.' like='4'/>
 			</div>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import s from "./Info.module.scss";
 
-function Info() {
+const Info = () => {
 	return (
 		<div>
 			<div className={s.info}>

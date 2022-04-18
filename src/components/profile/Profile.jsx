@@ -2,7 +2,7 @@ import Info from "./MyPosts/Info/Info";
 import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.scss";
 
-function Profile() {
+const Profile = () => {
 	return (
 		<div className={s.content}>
 			<div className={s.profileTopImg}>

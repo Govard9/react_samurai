@@ -1,6 +1,6 @@
 import style from './Header.module.scss';
 
-function Header() {
+const Header = () => {
 	return (
 		<header className={style.header}>
 			<img src='https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_TV_2015.svg' />
