@@ -1,11 +1,23 @@
-import s from './Dialogs.module.scss'
+import s from "./Dialogs.module.scss";
 
 const Dialogs = (props) => {
-    return (
-        <div>
-            Dialogs
-        </div>
-    )
-}
+	return (
+		<div className={s.dialogs}>
+			<div className={s.dialogsItems}>
+				<div className={s.dialog + ' ' + s.active}>Dimych</div>
+				<div className={s.dialog}>Andrey</div>
+				<div className={s.dialog}>Sveta</div>
+				<div className={s.dialog}>Sasha</div>
+				<div className={s.dialog}>Viktor</div>
+				<div className={s.dialog}>Valery</div>
+			</div>
+			<div className={s.messages}>
+				<div className={s.message}>Hi</div>
+				<div className={s.message}>How are you?</div>
+				<div className={s.message}>qq</div>
+			</div>
+		</div>
+	);
+};
 
 export default Dialogs;
