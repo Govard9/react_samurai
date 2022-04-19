@@ -5,9 +5,14 @@
 	.item {
 		color: chartreuse;
 		list-style: none;
+		
+		a {
+			color: white;
+			text-decoration: none;
+		}
 
-		&.active {
-			color: #0023e9;
+		a.active {
+			color: gold;
 		}
 	}
 }
