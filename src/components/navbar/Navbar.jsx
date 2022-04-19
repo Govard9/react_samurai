@@ -1,23 +1,23 @@
-import style from './Navbar.module.scss';
+import s from './Navbar.module.scss';
 
 const Navbar = () => {
 	return (
-		<nav className={style.nav}>
-			<ul>
-				<li className={style.item}>
-					<a>Messages</a>
+		<nav className={s.nav}>
+			<ul>				
+				<li className={s.item}>
+					<a href='/profile'>Profile</a>
 				</li>
-				<li className={`${style.item} ${style.active}`}>
-					<a>Music</a>
+				<li className={s.item}>
+					<a href='/dialogs'>Messages</a>
 				</li>
-				<li className={style.item}>
-					<a>News</a>
+				<li className={s.item}>
+					<a href='/news'>News</a>
+				<li className={`${s.item} ${s.active}`}>
+					<a href='/music'>Music</a>
 				</li>
-				<li className={style.item}>
-					<a>Profile</a>
 				</li>
-				<li className={style.item}>
-					<a>Settings</a>
+				<li className={s.item}>
+					<a href='/settings'>Settings</a>
 				</li>
 			</ul>
 		</nav>
