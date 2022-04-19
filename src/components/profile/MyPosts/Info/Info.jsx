@@ -3,6 +3,9 @@ import s from "./Info.module.scss";
 const Info = () => {
 	return (
 		<div>
+			<div className={s.profileTopImg}>
+				<img src="https://bigpicture.ru/wp-content/uploads/2013/03/Panorama03.jpg" />
+			</div>
 			<div className={s.info}>
 				<div className={s.profileMainImg}>
 					<img src="https://avatars.hsoubcdn.com/bb1f3454368d11fd3a2abef1cabf2b6d?s=256" />
