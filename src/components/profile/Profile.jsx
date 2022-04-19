@@ -4,7 +4,7 @@ import s from "./Profile.module.scss";
 
 const Profile = () => {
 	return (
-		<div className={s.content}>
+		<div>
 			<div className={s.profileTopImg}>
 				<img src="https://bigpicture.ru/wp-content/uploads/2013/03/Panorama03.jpg" />
 			</div>
