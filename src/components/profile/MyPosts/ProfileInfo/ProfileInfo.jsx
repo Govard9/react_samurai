@@ -1,6 +1,6 @@
-import s from "./Info.module.scss";
+import s from "./ProfileInfo.module.scss";
 
-const Info = () => {
+const ProfileInfo = () => {
 	return (
 		<div>
 			<div className={s.profileTopImg}>
@@ -24,4 +24,4 @@ const Info = () => {
 	);
 }
 
-export default Info;
+export default ProfileInfo;

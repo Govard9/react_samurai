@@ -1,11 +1,11 @@
-import Info from "./MyPosts/Info/Info";
 import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.scss";
+import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 
 const Profile = () => {
 	return (
 		<div>
-			<Info />
+			<ProfileInfo />
 			<MyPosts />
 		</div>
 	);
