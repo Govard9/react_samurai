@@ -22,9 +22,14 @@ const messages = [
   { id: 6, message: "Good idea!" },
 ];
 
+const postData = [
+  {id: 0, message: 'Hi, how are you?', like: 23},
+  {id: 1, message: 'My first post.', like: 4}
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App dialog={dialogs} message={messages} />
+    <App dialog={dialogs} message={messages} post={postData} />
   </React.StrictMode>,
   document.getElementById('root')
 );
