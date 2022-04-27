@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-	const postElements = props.post.map( p => <Post message={p.message} like={p.like}/>)
+	const postElements = props.posts.map( p => <Post message={p.message} like={p.like}/>)
 	
 	return (
 		<div>

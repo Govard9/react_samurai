@@ -1,7 +1,8 @@
-.messages {
-	padding: 10px;
+.left {
+	margin-right: 1px;
+}
 
-	.message {
-
-	}
+.right {
+	display: flex;
+	justify-content: end;
 }

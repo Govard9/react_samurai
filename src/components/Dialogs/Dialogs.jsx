@@ -3,19 +3,21 @@ import s from "./Dialogs.module.scss";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-	
-	let dialogsElements = props.dialog.map( d => <DialogItem name={d.name} id={d.id} />);
+	let dialogsElements = props.state.dialogs.map((d) => (
+		<DialogItem name={d.name} id={d.id} />
+	));
 
-	let messagesElements = props.message.map( m => <Message message={m.message} />);
+	let messagesElements = props.state.messages.map((m) => (
+		<Message message={m.message} myMsg={m.myMsg} />
+	));
 
 	return (
 		<div className={s.dialogs}>
-			<div className={s.dialogsItems}>
-				{ dialogsElements }
+			<div className={s.dialogH3}>
+				<h3>Dialogs</h3>
+				<div className={s.dialogsItems}>{dialogsElements}</div>
 			</div>
-			<div className={s.messages}>
-				{ messagesElements }
-			</div>
+			<div className={s.messages}>{messagesElements}</div>
 		</div>
 	);
 };

@@ -2,11 +2,21 @@
 	display: grid;
 	grid-template-columns: 2fr 10fr;
 
+	.dialogH3 {
+		display: flex;
+		flex-direction: column;
+		h3 {
+			margin-left: 25px;
+			margin-top: -1px;
+			margin-bottom: -1px;
+			color:  darkblue;
+		}
+	}
+
 	.dialogsItems {
 		padding: 10px;
 
 		.dialog {
-
 			&.active {
 				color: lightcoral;
 			}
@@ -16,8 +26,4 @@
 
 .messages {
 	padding: 10px;
-
-	.message {
-
-	}
 }

@@ -1,15 +1,16 @@
 .dialogs {
-	display: grid;
-	grid-template-columns: 2fr 10fr;
-
-	.dialogsItems {
-		padding: 10px;
-
-		.dialog {
-
-			&.active {
-				color: lightcoral;
-			}
+	display: flex;
+	.img {
+		img {
+			width: 35px;
+		}
+	}
+	.link {
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 5px;
+		.navLink {
+			text-decoration: none;
 		}
 	}
 }
