@@ -56,8 +56,17 @@ let store = {
 		} else if (action.type === "UPDATE_NEW_POST_TEXT") {
 			this._state.profilePage.newPostText = action.newText;
 			this._callSubscriber(this._state);
+		}else if (action.type === "UPDATE_NEW_POST_TEXT") {
+			this._state.profilePage.newPostText = action.newText;
+			this._callSubscriber(this._state);
 		}
 	},
 };
+
+export const addPostActionCreator = () => ({type: 'ADD-POST'});
+
+export const updateNewPostTextActionCreator = (text) => {
+	return {type: 'UPDATE_NEW_POST_TEXT', newText: text };
+}
 
 export default store;
