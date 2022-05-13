@@ -27,3 +27,16 @@
 .messages {
 	padding: 10px;
 }
+
+.content {
+    margin-left: 10px;
+
+	textarea {
+		width: 500%;
+		height: 50px;
+	}
+
+	button {
+        margin-bottom: 30px;
+    }
+}

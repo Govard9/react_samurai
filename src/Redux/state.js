@@ -24,6 +24,7 @@ let store = {
 				{ id: 5, message: "Hello my friend", myMsg: 1 },
 				{ id: 6, message: "Good idea!", myMsg: 0 },
 			],
+			newMessage: "",
 			friends: [
 				{ id: 2, name: "Andrey" },
 				{ id: 4, name: "Sasha" },
@@ -56,8 +57,20 @@ let store = {
 		} else if (action.type === "UPDATE_NEW_POST_TEXT") {
 			this._state.profilePage.newPostText = action.newText;
 			this._callSubscriber(this._state);
-		}else if (action.type === "UPDATE_NEW_POST_TEXT") {
-			this._state.profilePage.newPostText = action.newText;
+		}
+
+		if (action.type === "ADD-MESSAGE") {
+			let newMessage = {
+				id: 10,
+				message: this._state.dialogsPage.newMessage,
+				myMsg: Math.round(Math.random()),
+			};
+
+			this._state.dialogsPage.messages.push(newMessage);
+			this._state.dialogsPage.newMessage = "";
+			this._callSubscriber(this._state);
+		} else if (action.type === "UPDATE_NEW_MESSAGE_TEXT") {
+			this._state.dialogsPage.newMessage = action.newText;
 			this._callSubscriber(this._state);
 		}
 	},
@@ -67,6 +80,13 @@ export const addPostActionCreator = () => ({type: 'ADD-POST'});
 
 export const updateNewPostTextActionCreator = (text) => {
 	return {type: 'UPDATE_NEW_POST_TEXT', newText: text };
+}
+
+
+export const addMessageActionCreator = () => ({type: 'ADD-MESSAGE'});
+
+export const updateNewMessageTextActionCreator = (text) => {
+	return {type: 'UPDATE_NEW_MESSAGE_TEXT', newText: text };
 }
 
 export default store;
