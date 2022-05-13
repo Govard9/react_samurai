@@ -5,7 +5,7 @@ let store = {
 				{ id: 0, message: "Hi, how are you?", like: 23 },
 				{ id: 1, message: "My first post.", like: 4 },
 			],
-			newPostText: ''
+			newPostText: "",
 		},
 		dialogsPage: {
 			dialogs: [
@@ -17,12 +17,12 @@ let store = {
 				{ id: 6, name: "Valery" },
 			],
 			messages: [
-				{ id: 1, message: "Hi", myMsg: 1},
-				{ id: 2, message: "How are you?", myMsg: 0},
-				{ id: 3, message: "qq", myMsg: 1},
-				{ id: 4, message: "Try hard", myMsg: 0},
-				{ id: 5, message: "Hello my friend", myMsg: 1},
-				{ id: 6, message: "Good idea!", myMsg: 0},
+				{ id: 1, message: "Hi", myMsg: 1 },
+				{ id: 2, message: "How are you?", myMsg: 0 },
+				{ id: 3, message: "qq", myMsg: 1 },
+				{ id: 4, message: "Try hard", myMsg: 0 },
+				{ id: 5, message: "Hello my friend", myMsg: 1 },
+				{ id: 6, message: "Good idea!", myMsg: 0 },
 			],
 			friends: [
 				{ id: 2, name: "Andrey" },
@@ -31,30 +31,33 @@ let store = {
 			],
 		},
 	},
+	_callSubscriber() {
+		console.log("State changed");
+	},
+
 	getState() {
 		return this._state;
 	},
-	_callSubscriber() {
-		console.log('State changed');
-	},
-	addPost() {
-		let newPost = {
-			id: 5,
-			message: this._state.profilePage.newPostText,
-			likesCount: 0
-		};
-	
-		this._state.profilePage.posts.push(newPost);
-		this._state.profilePage.newPostText = '';
-		this._callSubscriber(this._state);
-	},
-	updateNewPostText(newText) {
-		this._state.profilePage.newPostText = newText;
-		this._callSubscriber(this._state);
-	},
 	subscribe(observer) {
 		this._callSubscriber = observer;
-	}
-}
+	},
+
+	dispatch(action) {
+		if (action.type === "ADD-POST") {
+			let newPost = {
+				id: 5,
+				message: this._state.profilePage.newPostText,
+				likesCount: 0,
+			};
+
+			this._state.profilePage.posts.push(newPost);
+			this._state.profilePage.newPostText = "";
+			this._callSubscriber(this._state);
+		} else if (action.type === "UPDATE_NEW_POST_TEXT") {
+			this._state.profilePage.newPostText = action.newText;
+			this._callSubscriber(this._state);
+		}
+	},
+};
 
 export default store;
