@@ -5,16 +5,14 @@ import React from "react";
 const MyPosts = (props) => {
 
 	const postElements = props.posts.map( p => <Post message={p.message} like={p.like}/>)
-	
-	let newPostElement = React.createRef();
 
 	let onAddPost = () => {
 		// props.dispatch( addPostActionCreator() );
 		props.addPost();
 	}
 
-	let onPostChange = () => {
-		let text = newPostElement.current.value;
+	let onPostChange = (e) => {
+		let text = e.target.value;
 		// let action = updateNewPostTextActionCreator(text);
 		// props.dispatch(action);
 		props.updateNewPostText(text);
@@ -29,8 +27,7 @@ const MyPosts = (props) => {
 				<div className={s.parent}>
 					<textarea 
 					onChange={onPostChange}
-					placeholder="your news..." 
-					ref={ newPostElement } 
+					placeholder="your news..."  
 					value={props.newPostText} />
 					<button onClick={ onAddPost }>Send</button>
 				</div>

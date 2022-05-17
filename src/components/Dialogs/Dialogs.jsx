@@ -5,13 +5,11 @@ import React from "react";
 
 const Dialogs = (props) => {
 
-	let state = props.dialogPage;
-
-	let dialogsElements = props.state.dialogs.map((d) => (
+	let dialogsElements = props.dialogPage.dialogs.map((d) => (
 		<DialogItem name={d.name} id={d.id} />
 	));
 
-	let messagesElements = props.state.messages.map((m) => (
+	let messagesElements = props.dialogPage.messages.map((m) => (
 		<Message
 			message={m.message}
 			myMsg={m.myMsg}
@@ -39,7 +37,7 @@ const Dialogs = (props) => {
 				<textarea
 					onChange={onMessageChange}
 					placeholder="your message..."
-					value={props.state.newMessage}
+					value={props.dialogPage.newMessage}
 				/>
 				<button onClick={onSendMessageClick}>Add message</button>
 			</div>
