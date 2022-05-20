@@ -9,12 +9,13 @@ import Settings from "./components/Settings/Settings";
 
 import { Routes, Route } from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import NavFriendsContainer from "./components/Navbar/NavbarContainer";
 
 const App = (props) => {
 	return (
 		<div className="app-wrapper">
 			<Header />
-			<Navbar state={props.state.dialogsPage} />
+			<NavFriendsContainer store={props.state} dispatch={props.dispatch} />
 			<div class="app-wrapper-content">
 				<Routes>
 					<Route

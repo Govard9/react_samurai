@@ -4,7 +4,7 @@ import NavFriends from "./NavFriends/NavFriends";
 
 const Navbar = (props) => {
 
-	let friendsNavElements = props.state.friends.map( d => <NavFriends name={d.name} id={d.id} />);
+	let friendsNavElements = props.dialogsPage.friends.map( d => <NavFriends name={d.name} id={d.id} />);
 
 	return (
 		<nav className={s.nav}>
