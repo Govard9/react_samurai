@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 import React from "react";
 
 const MyPosts = (props) => {
-
+	debugger
 	const postElements = props.posts.map( p => <Post message={p.message} like={p.like}/>)
 
 	let onAddPost = () => {
@@ -15,7 +15,7 @@ const MyPosts = (props) => {
 		let text = e.target.value;
 		// let action = updateNewPostTextActionCreator(text);
 		// props.dispatch(action);
-		props.updateNewPostText(text);
+		props.onPostChange(text);
 	}
 
 	return (
